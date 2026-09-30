@@ -2,7 +2,6 @@
 import { ArrowRight, MessageSquare } from "lucide-react";
 
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
-import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils/cn";
 
 type Props = {
@@ -53,7 +52,7 @@ export function ServiceCtaCard({ title, description, buttonLabel }: Props) {
         </div>
 
         {/* CTA derecha */}
-        <Link
+        <a
           href="#contact"
           className={cn(
             "group/btn relative inline-flex h-12 shrink-0 items-center gap-2 rounded-full",
@@ -64,7 +63,7 @@ export function ServiceCtaCard({ title, description, buttonLabel }: Props) {
         >
           {buttonLabel}
           <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5" />
-        </Link>
+        </a>
       </div>
     </RevealOnScroll>
   );

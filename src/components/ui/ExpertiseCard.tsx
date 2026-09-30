@@ -3,7 +3,6 @@ import { ArrowRight, Code2, Database, Smartphone } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
-import { Link } from "@/i18n/navigation";
 import type { ExpertiseArea, Metric } from "@/seed/types";
 import { cn } from "@/lib/utils/cn";
 
@@ -92,7 +91,7 @@ export function ExpertiseCard({
 
         {/* CTA */}
         {area.cta && (
-          <Link
+          <a
             href={area.cta.href}
             className={cn(
               "group inline-flex w-fit items-center gap-2 rounded-full border border-border bg-bg px-4 py-2",
@@ -102,7 +101,7 @@ export function ExpertiseCard({
           >
             {area.cta.label[l]}
             <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
-          </Link>
+          </a>
         )}
       </div>
     </div>

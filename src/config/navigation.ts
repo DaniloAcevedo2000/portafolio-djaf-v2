@@ -30,7 +30,7 @@ export type NavGroup = {
   description: LocalizedString;
   items: NavSubItem[];
   ctas: {
-    primary: { label: LocalizedString; href: string; icon: LucideIcon };
+    primary: { label: LocalizedString; href: string; icon?: LucideIcon };  
     secondary?: { label: LocalizedString; href: string; icon?: LucideIcon };
     footnote?: LocalizedString;
   };
@@ -42,7 +42,7 @@ export type NavItem =
       type: "link";
       label: LocalizedString;
       href: string;
-      icon: LucideIcon;
+      icon?: LucideIcon;
     }
   | {
       id: string;
