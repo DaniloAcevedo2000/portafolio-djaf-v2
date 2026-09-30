@@ -1,0 +1,232 @@
+{
+  "metadata": {
+    "title": "Danilo Acevedo — Computer Engineer",
+    "description": "Professional portfolio of Danilo Acevedo: Full Stack Developer & Data Engineer."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Computer Engineer · Full Stack Developer & Data Engineer",
+    "downloadCV": "Download CV",
+    "contactMe": "Contact me",
+    "viewProjects": "View projects",
+    "available": "Available for new opportunities"
+  },
+  "sections": {
+    "about": {
+      "eyebrow": "// About me",
+      "title": "About me",
+      "subtitle": "A bit about my professional profile",
+      "bioLabel": "Bio",
+      "terminalLabel": "Profile",
+      "terminalCommand": "cat profile.json",
+      "timeline": {
+        "title": "Career",
+        "subtitle": "My professional journey",
+        "current": "Present",
+        "viewFull": "View full timeline",
+        "viewFullHint": "All details for each role"
+      },
+      "stats": {
+        "experience": "Years of experience",
+        "domains": "Domains",
+        "languages": "Languages",
+        "available": "Available",
+        "unavailable": "Not available"
+      }
+    },
+    "experience": {
+      "eyebrow": "// Experience",
+      "title": "Where I apply my stack",
+      "subtitle": "The areas I've worked in professionally, with their impact and key technologies",
+      "current": "Present",
+      "technologies": "Technologies",
+      "appliedIn": "Applied in",
+      "featuredProjects": "Featured projects",
+      "mainStack": "Main stack",
+      "labels": {
+        "yearsExp": "Years exp.",
+        "roles": "Roles",
+        "projects": "Projects",
+        "domains": "Domains",
+        "technologies": "Technologies",
+        "domain": "Domain"
+      }
+    },
+  "projects": {
+    "eyebrow": "// Projects",
+    "title": "Featured Projects",
+    "subtitle": "A selection of projects that reflect how I design, develop, and solve real problems with software.",
+    "filters": {
+      "all": "All",
+      "client": "Client",
+      "freelance": "Freelance"
+    },
+    "badge": {
+      "client": "Client work",
+      "freelance": "Freelance",
+      "private": "Private"
+    },
+    "viewDetails": "View details",
+    "empty": "No projects for this filter"
+  },
+    "skills": {
+      "eyebrow": "// Skills",
+      "title": "Technical Stack",
+      "subtitle": "Technologies I've put into production in enterprise systems, financial platforms, and high-compliance environments",
+      "search": {
+        "placeholder": "grep stack...",
+        "shortcut": "/",
+        "noResults": "No matches in the current stack",
+        "clear": "Clear search"
+      },
+      "tabsAria": "Skill categories",
+      "viewCertificates": "View certificates"
+    },
+    "services": {
+      "eyebrow": "// Services",
+      "title": "How can I help you?",
+      "subtitle": "Professional services I offer, based on my experience in banking, telecommunications, and independent development",
+      "capabilitiesLabel": "Includes",
+      "cta": {
+        "title": "Do you have a project in mind?",
+        "description": "Let's talk about how I can help you build or improve it.",
+        "button": "Contact me"
+      }
+    },
+    "education": {
+      "title": "Education",
+      "subtitle": "Academic background",
+      "certifications": {
+        "title": "Certifications",
+        "subtitle": "Professional courses and certifications"
+      }
+    },
+  "contact": {
+    "eyebrow": "// Contact",
+    "title": "Let's talk",
+    "subtitle": "Do you have a project in mind, an offer, or just want to say hi? Pick your favorite channel.",
+    "availability": {
+      "available": "Available for new opportunities",
+      "responseTime": "Response within 24 h",
+      "remoteFriendly": "Open to remote and hybrid",
+      "basedIn": "Based in"
+    },
+    "channels": {
+      "email": {
+        "label": "Email",
+        "description": "The most direct way",
+        "cta": "Send email"
+      },
+      "whatsapp": {
+        "label": "WhatsApp",
+        "description": "Fast response",
+        "cta": "Chat"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "description": "Professional profile",
+        "cta": "View profile"
+      },
+      "phone": {
+        "label": "Phone call",
+        "description": "If you prefer to talk",
+        "cta": "Call"
+      }
+    }
+  }
+  },
+  "footer": {
+    "navigationTitle": "Navigation",
+    "rights": "All rights reserved.",
+    "backToTop": "Back to top",
+    "links": {
+      "timeline": "Timeline"
+    },
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "experience": "Experience",
+      "skills": "Skills",
+      "projects": "Projects",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "weather": {
+      "live": "Live",
+      "wind": "Wind",
+      "unavailable": "Weather unavailable right now",
+      "poweredBy": "Powered by"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong"
+  },
+  "themeSwitcher": {
+    "trigger": "Theme",
+    "modeSection": "Mode",
+    "paletteSection": "Palette",
+    "mode": {
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "theme": {
+      "blue": "Blue"
+    },
+    "comingSoon": "Soon"
+  },
+  "localeSwitcher": {
+    "label": "Change language"
+  },
+  "scrollIndicator": {
+    "text": "Scroll",
+    "label": "Scroll down"
+  },
+  "header": {
+    "brandAria": "Go to home",
+    "brandShort": "DA",
+    "brandName": "Danilo Acevedo",
+    "ctaContact": "Contact me",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "navAria": "Main navigation",
+    "exploreLabel": "Explore",
+    "menu": {
+      "home": "Home",
+      "about": "About",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    }
+  },
+  "timelinePage": {
+    "eyebrow": "// Career",
+    "title": "Full timeline",
+    "subtitle": "All the details of my professional journey",
+    "meta": {
+      "title": "Timeline — Danilo Acevedo",
+      "description": "Complete professional career of Danilo Acevedo."
+    },
+    "backHome": "Back to home",
+    "backToPortfolio": "Back to portfolio",
+    "currentBadge": "Present",
+    "sections": {
+      "experience": "Professional experience",
+      "education": "Academic background"
+    },
+    "duration": {
+      "oneYear": "1 year",
+      "years": "{count} years",
+      "months": "{count} months",
+      "present": "Present"
+    }
+  }
+}

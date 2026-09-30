@@ -1,0 +1,300 @@
+/* src/app/globals.css */
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+/* ─────────────────────────────────────────────────────
+   TEMA BLUE — Paleta principal del portafolio
+   ─────────────────────────────────────────────────────
+   Estructura:
+     [data-theme="blue"]                    → valores comunes (primary, accent)
+     [data-theme="blue"][data-mode="light"] → valores light
+     [data-theme="blue"][data-mode="dark"]  → valores dark
+
+   Futuro: añadir [data-theme="crimson"] con la misma estructura.
+   ───────────────────────────────────────────────────── */
+
+/* Valores comunes a light y dark */
+[data-theme="blue"] {
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-primary-foreground: #ffffff;
+  --color-accent: #3b82f6;
+  --color-accent-soft: #dbeafe;
+}
+
+/* Modo claro */
+[data-theme="blue"][data-mode="light"] {
+  --color-bg: #f0f4ff;
+  --color-bg-elevated: #ffffff;
+  --color-bg-subtle: #e0e7ff;
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+  --color-border-strong: #cbd5e1;
+
+  /* ─── FOOTER ─── */
+  --color-footer-bg: #1e40af;
+  --color-footer-text: #ffffff;
+  --color-footer-text-muted: rgba(255, 255, 255, 0.75);
+  --color-footer-text-subtle: rgba(255, 255, 255, 0.55);
+  --color-footer-border: rgba(255, 255, 255, 0.15);
+  --color-footer-card-bg: rgba(255, 255, 255, 0.08);
+  --color-footer-card-border: rgba(255, 255, 255, 0.15);
+}
+
+/* Modo oscuro */
+[data-theme="blue"][data-mode="dark"] {
+  --color-bg: #0a0f1e;
+  --color-bg-elevated: #131b2e;
+  --color-bg-subtle: #1a2540;
+  --color-text: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --color-border: #1e293b;
+  --color-border-strong: #334155;
+
+  /* ─── FOOTER ─── */
+  --color-footer-bg: #0f172a;
+  --color-footer-text: #f1f5f9;
+  --color-footer-text-muted: rgba(241, 245, 249, 0.7);
+  --color-footer-text-subtle: rgba(241, 245, 249, 0.5);
+  --color-footer-border: rgba(255, 255, 255, 0.1);
+  --color-footer-card-bg: rgba(255, 255, 255, 0.04);
+  --color-footer-card-border: rgba(255, 255, 255, 0.1);
+}
+
+/* ─────────────────────────────────────────────────────
+   Puente con Tailwind 4: expone las variables como
+   utilidades (bg-bg, text-text, border-border, etc.)
+   ───────────────────────────────────────────────────── */
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-bg-elevated: var(--color-bg-elevated);
+  --color-bg-subtle: var(--color-bg-subtle);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+  --color-border: var(--color-border);
+  --color-border-strong: var(--color-border-strong);
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-primary-foreground: var(--color-primary-foreground);
+  --color-accent: var(--color-accent);
+  --color-accent-soft: var(--color-accent-soft);
+
+  /* ─── FOOTER ─── */
+  --color-footer-bg: var(--color-footer-bg);
+  --color-footer-text: var(--color-footer-text);
+  --color-footer-text-muted: var(--color-footer-text-muted);
+  --color-footer-text-subtle: var(--color-footer-text-subtle);
+  --color-footer-border: var(--color-footer-border);
+  --color-footer-card-bg: var(--color-footer-card-bg);
+  --color-footer-card-border: var(--color-footer-card-border);
+
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+/* ─────────────────────────────────────────────────────
+   Estilos base
+   ───────────────────────────────────────────────────── */
+html {
+  color-scheme: light dark;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
+}
+
+/* Scroll suave al navegar entre anclas */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Compensación para el header flotante al hacer scroll a anclas */
+:target {
+  scroll-margin-top: 100px;
+}
+
+/* ─────────────────────────────────────────────────────
+   Animaciones
+   ───────────────────────────────────────────────────── */
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(28px);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.05);
+  }
+}
+
+.animate-fade-up,
+.animate-fade-in,
+.animate-scale-in,
+.animate-slide-in-left {
+  animation-duration: 800ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;
+}
+
+.animate-fade-up {
+  animation-name: fade-up;
+}
+
+.animate-fade-in {
+  animation-name: fade-in;
+}
+
+.animate-scale-in {
+  animation-name: scale-in;
+}
+
+.animate-slide-in-left {
+  animation-name: slide-in-left;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* Micro-interacciones: iconos sociales */
+a[aria-label="GitHub"] svg,
+a[aria-label="LinkedIn"] svg,
+a[aria-label="Email"] svg,
+a[aria-label="Portfolio"] svg {
+  transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+a[aria-label="GitHub"]:hover svg,
+a[aria-label="LinkedIn"]:hover svg,
+a[aria-label="Email"]:hover svg,
+a[aria-label="Portfolio"]:hover svg {
+  transform: scale(1.2) rotate(8deg);
+}
+
+/* Respetar accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-in,
+  .animate-scale-in,
+  .animate-slide-in-left,
+  .animate-spin-slow,
+  .animate-pulse-glow {
+    animation: none;
+  }
+}
+
+/* ─────────────────────────────────────────────────────
+   Scroll indicator
+   ───────────────────────────────────────────────────── */
+@keyframes scroll-dot {
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, 34px);
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, 0);
+    opacity: 0;
+  }
+}
+
+.animate-scroll-dot {
+  animation: scroll-dot 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-in,
+  .animate-scale-in,
+  .animate-slide-in-left,
+  .animate-spin-slow,
+  .animate-pulse-glow,
+  .animate-scroll-dot {
+    animation: none;
+  }
+}
+
+/* ─────────────────────────────────────────────────────
+   Ocultar scrollbar (para timeline horizontal en mobile)
+   ───────────────────────────────────────────────────── */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
